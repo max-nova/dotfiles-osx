@@ -1,0 +1,37 @@
+# OSX color terminal
+export CLICOLOR=1
+
+# virtualenv
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+# AWS
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
+
+# AWS credentials
+export EC2_PRIVATE_KEY="$HOME/aws/ec2-keypair.pem"
+export EC2_CERT="$HOME/aws/cert-ZZKLLFELDRYO7L2CCIP6CBJV4DS3K4ZM.pem"
+
+# GIS tools
+export PATH=/usr/local/pgsql-9.3/bin:/Library/Frameworks/GDAL.framework/Programs:$PATH
+
+# override for R CMD build 
+export TAR=/usr/bin/tar
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+### Nicole DNS proxy
+alias proxyon="sudo networksetup -setwebproxystate Wi-Fi on && sudo networksetup -setsecurewebproxystate Wi-Fi on && ssh -L 3128:localhost:8888 -N root@162.243.199.99"
+alias proxyoff="sudo networksetup -setwebproxystate Wi-Fi off && sudo networksetup -setsecurewebproxystate Wi-Fi off"
+
+# bash aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# bash secret variables
+if [ -f /Users/max/Dropbox/Personal/Accounts/bash_secret ]; then
+    source /Users/max/Dropbox/Personal/Accounts/bash_secret
+fi

@@ -1,0 +1,9 @@
+[user]
+	name = Max.Uhlenhuth
+	email = max@silviaterra.com
+[push]
+        default = simple
+[color]
+	status = auto
+	branch = auto
+	ui = true

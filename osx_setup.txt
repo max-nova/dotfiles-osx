@@ -1,0 +1,98 @@
+# uncheck "play UI sound effects" in the Sound preferencecs
+# uncheck "smart quotes" and "smart dashes" in TextEdit
+
+# install chrome, chrome canary, firefox, and dropbox from the web
+# install Xcode and Evernote from app store
+
+brew install git bash-completion
+
+mkdir -p ~/.vim/autoload
+mkdir -p ~/.vim/bundle
+cd ~/.vim/autoload
+curl https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > pathogen.vim
+
+# Install vim plugins
+sudo pip install pyflakes pep8
+cd ~/.vim/bundle
+git clone git://github.com/scrooloose/nerdtree.git
+git clone git://github.com/rkulla/pydiction.git
+git clone git://github.com/scrooloose/syntastic.git
+
+# Install python/pip/virtualenv
+sudo easy_install pip
+sudo pip install --upgrade virtualenvwrapper
+pip install virtualenv virtualenvwrapper
+mkdir -p ~/.virtualenvs
+
+# Install node/npm
+mkdir ~/.nodeenvs
+cd ~./nodeenvs
+sudo pip install nodeenv
+
+# Download and install R
+# http://cran.mirrors.hoobly.com/  (3.0.2)
+# Install spgrass6 (will probably need to install "XQuartz" first to get X windows manager)
+R
+install.packages("spgrass6")
+
+# install kyng chaos packages
+# * GDAL - http://www.kyngchaos.com/software/frameworks 
+# 	(download "GDAL 1.10 Complete", click the .dmg, then the "GDAL Complete.pkg" file)
+#	(no need to get the numpy files)
+# * PostgreSQL - http://www.kyngchaos.com/software/postgres
+#	(download "PostgreSQL 9.3.1-1" and "PostGIS 2.1.1-1 for Postgres 9.3")
+
+# Install QGIS  - NOT WORKING
+pip install numpy
+# FreeType - http://www.kyngchaos.com/software/frameworks
+# matplotlib - http://www.kyngchaos.com/software/python
+# QGIS 2.0.1-7 for Lion - http://www.kyngchaos.com/software/qgis
+
+# Install GRASS
+pip install PIL
+# cairo - http://www.kyngchaos.com/software/frameworks
+# GRASS - http://www.kyngchaos.com/software/grass
+
+# Install psycopg2 (because we're using KyngChaos postgis) - http://www.kyngchaos.com/software/python
+
+# Install Java JDK
+
+# Get EC2 API tools
+brew install ec2-api-tools
+
+# Install Google Earth and LibreOffice
+
+# Set up ssh keys on github
+# https://help.github.com/articles/generating-ssh-keys
+
+# Clone silviaterra repos and install
+mkdir -p ~/workspace
+cd ~/workspace
+
+git clone git@github.com:SilviaTerra/kudzu_tools.git
+git clone git@github.com:SilviaTerra/hydra.git
+git clone git@github.com:SilviaTerra/st_web.git
+git clone git@github.com:SilviaTerra/mr_t.git
+git clone git@github.com:SilviaTerra/kudzu_hacks.git
+
+sudo ln -s ~/workspace/kudzu_tools/ /usr/local/lib/python2.7/site-packages/kudzu_tools
+sudo ln -s ~/workspace/hydra/ /usr/local/lib/python2.7/site-packages/hydra
+sudo ln -s ~/workspace/kudzu_hacks/ /usr/local/lib/python2.7/site-packages/kudzu_hacks
+
+mkvirtualenv mr-t && pip install -r ~/workspace/mr_t/requirements.txt
+ln -s /Library/Frameworks/GDAL.framework/Versions/1.10/Python/2.7/site-packages/osgeo $VIRTUAL_ENV/lib/python2.7/site-packages/.
+ln -s $PWD/../kudzu_tools $VIRTUAL_ENV/lib/python2.7/site-packages/.
+deactivate
+# may have to comment out GDAL and psycopg2 in requirements.txt
+mkvirtualenv st_web && pip install -r ~/workspace/st_web/requirements.txt && deactivate
+
+# to install GDAL in virtualenvs:
+ln -s /Library/Frameworks/GDAL.framework/Versions/1.10/Python/2.7/site-packages/osgeo $VIRTUAL_ENV/lib/python2.7/site-packages/.
+
+git clone git@github.com:SilviaTerra/plot-hound.git
+
+git clone git@github.com:SilviaTerra/ts_utils.git
+git clone git@github.com:SilviaTerra/lspe.git
+git clone git@github.com:SilviaTerra/st_report.git
+git clone git@github.com:SilviaTerra/ts_algo.git
+

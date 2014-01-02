@@ -12,7 +12,7 @@ GREEN=$(tput setaf 2)
 MAGENTA=$(tput setaf 5)
 WHITE=$(tput setaf 7)
 NORMAL=$(tput sgr0)
-export PS1='${MAGENTA}`__git_ps1 "(%s)"`${GREEN}\w${WHITE}\r\n${NORMAL}$ '
+export PS1='\[${MAGENTA}\]`__git_ps1 "(%s)"`\[${GREEN}\]\w\[${WHITE}\]\r\n\[${NORMAL}\]$ '
 
 # virtualenv
 export WORKON_HOME=~/.virtualenvs

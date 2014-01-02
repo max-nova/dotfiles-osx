@@ -4,6 +4,10 @@
 # install chrome, chrome canary, firefox, and dropbox from the web
 # install Xcode and Evernote from app store
 
+curl https://raw.github.com/beautifulcode/ssh-copy-id-for-OSX/master/ssh-copy-id.sh -o /usr/local/bin/ssh-copy-id
+chmod +x /usr/local/bin/ssh-copy-id
+# run ssh-copy-id "username@host -p port" for each server
+
 brew install git bash-completion
 
 mkdir -p ~/.vim/autoload

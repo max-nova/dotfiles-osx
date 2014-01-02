@@ -4,8 +4,8 @@ ln -sf $DIR/vimrc ~/.vimrc
 
 ln -sf $DIR/bash/bashrc ~/.bashrc
 ln -sf $DIR/bash/bash_aliases ~/.bash_aliases
-echo "[[ -s ~/.bashrc ]] && source ~/.bashrc" >> ~/.profile
-source ~/.bashrc
+echo "[[ -s ~/.bashrc ]] && source ~/.bashrc" > ~/.profile
+source ~/.profile
 
 ln -sf $DIR/gitconfig ~/.gitconfig
 ln -sf $DIR/hgrc ~/.hgrc

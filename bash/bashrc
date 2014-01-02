@@ -1,6 +1,26 @@
 # OSX color terminal
 export CLICOLOR=1
 
+# enable git unstaged indicators - set to a non-empty value
+GIT_PS1_SHOWDIRTYSTATE="."
+ 
+# enable showing of untracked files - set to a non-empty value
+GIT_PS1_SHOWUNTRACKEDFILES="."
+ 
+# enable stash checking - set to a non-empty value
+GIT_PS1_SHOWSTASHSTATE="."
+ 
+# enable showing of HEAD vs its upstream
+GIT_PS1_SHOWUPSTREAM="auto"
+ 
+GREEN=$(tput setaf 2)
+MAGENTA=$(tput setaf 5)
+WHITE=$(tput setaf 7)
+NORMAL=$(tput sgr0)
+
+# command prompt
+export PS1='${MAGENTA}`__git_ps1 "(%s)"`${GREEN}\w${WHITE}\r\n${NORMAL}$ '
+
 # virtualenv
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -29,6 +49,11 @@ alias proxyoff="sudo networksetup -setwebproxystate Wi-Fi off && sudo networkset
 # bash aliases
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
+fi
+
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 # bash secret variables

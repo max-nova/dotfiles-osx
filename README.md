@@ -1,7 +1,7 @@
 dotfiles-osx
 ============
 
-Computer setup on Mac OSX
+Computer setup on Mac OSX - inspired by http://dotfiles.github.io/
 
 Installation
 ------------

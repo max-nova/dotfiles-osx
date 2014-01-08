@@ -8,7 +8,7 @@ curl https://raw.github.com/beautifulcode/ssh-copy-id-for-OSX/master/ssh-copy-id
 chmod +x /usr/local/bin/ssh-copy-id
 # run ssh-copy-id "username@host -p port" for each server
 
-brew install git bash-completion
+brew install wget git bash-completion
 
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/bundle
@@ -45,8 +45,9 @@ install.packages("spgrass6")
 #	(no need to get the numpy files)
 # * PostgreSQL - http://www.kyngchaos.com/software/postgres
 #	(download "PostgreSQL 9.3.1-1" and "PostGIS 2.1.1-1 for Postgres 9.3")
+#   note - had to manually create a "postgres" system user
 
-# Install QGIS  - NOT WORKING
+# Install QGIS
 pip install numpy
 # FreeType - http://www.kyngchaos.com/software/frameworks
 # matplotlib - http://www.kyngchaos.com/software/python

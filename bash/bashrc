@@ -32,13 +32,16 @@ export EC2_CERT="$HOME/aws/cert-ZZKLLFELDRYO7L2CCIP6CBJV4DS3K4ZM.pem"
 # GIS tools
 export PATH=/usr/local/pgsql-9.3/bin:/Library/Frameworks/GDAL.framework/Programs:$PATH
 
+# QGIS scripting
+export PYTHONPATH=/Applications/QGIS.app/Contents/Resources/python:$PYTHONPATH
+
 # override for R CMD build 
 export TAR=/usr/bin/tar
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-### Nicole DNS proxy
+### DNS proxy
 alias proxyon="sudo networksetup -setwebproxystate Wi-Fi on && sudo networksetup -setsecurewebproxystate Wi-Fi on && ssh -L 3128:localhost:8888 -N root@162.243.199.99"
 alias proxyoff="sudo networksetup -setwebproxystate Wi-Fi off && sudo networksetup -setsecurewebproxystate Wi-Fi off"
 

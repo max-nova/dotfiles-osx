@@ -15,6 +15,5 @@ alias gbr='git branch'
 
 # dev aliases
 alias web='cd ~/workspace/st_web; workon st_web'
-alias worker='cd ~/workspace/st_worker; workon st_worker'
 alias mrt='cd ~/workspace/mr_t; workon mr-t'
 alias update='for repo in ~/workspace/*; do cd $repo && git pull; done'

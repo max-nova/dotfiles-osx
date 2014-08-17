@@ -2,6 +2,9 @@
 export CLICOLOR=1
 
 # git prompt indicators
+source /usr/local/git/contrib/completion/git-completion.bash
+source /usr/local/git/contrib/completion/git-prompt.sh
+
 GIT_PS1_SHOWDIRTYSTATE="."
 GIT_PS1_SHOWUNTRACKEDFILES="."
 GIT_PS1_SHOWSTASHSTATE="."

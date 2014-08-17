@@ -10,6 +10,12 @@ chmod +x /usr/local/bin/ssh-copy-id
 
 brew install wget git bash-completion
 
+# Install python/pip/virtualenv
+brew install python
+pip install virtualenvwrapper
+mkdir -p ~/.virtualenvs
+# may require http://stackoverflow.com/questions/11507186/ - see brew comment
+
 mkdir -p ~/.vim/autoload
 mkdir -p ~/.vim/bundle
 cd ~/.vim/autoload
@@ -21,12 +27,6 @@ cd ~/.vim/bundle
 git clone git://github.com/scrooloose/nerdtree.git
 git clone git://github.com/rkulla/pydiction.git
 git clone git://github.com/scrooloose/syntastic.git
-
-# Install python/pip/virtualenv
-sudo easy_install pip
-sudo pip install --upgrade virtualenvwrapper
-pip install virtualenv virtualenvwrapper
-mkdir -p ~/.virtualenvs
 
 # Install node/npm
 mkdir ~/.nodeenvs

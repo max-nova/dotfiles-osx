@@ -13,6 +13,10 @@ alias gci='git commit -a -m'
 alias grb='git rebase'
 alias gbr='git branch'
 
+# docker
+alias docker-start='docker-machine start default && eval "$(docker-machine env default)"'
+alias docker-stop='docker-machine stop default'
+
 # dev aliases
 alias web='cd ~/workspace/st_web; workon st_web'
 alias mrt='cd ~/workspace/mr_t; workon mr-t'

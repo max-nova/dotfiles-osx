@@ -16,6 +16,7 @@ alias gbr='git branch'
 # docker
 alias docker-start='docker-machine start default && eval "$(docker-machine env default)"'
 alias docker-stop='docker-machine stop default'
+alias docker-pr='docker run -i -t -v ~/docker-mnt:/mnt/vol -v ~/workspace:/opt silviaterra/general bash'
 
 # dev aliases
 alias web='cd ~/workspace/st_web; workon st_web'

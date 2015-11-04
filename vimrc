@@ -1,7 +1,7 @@
 execute pathogen#infect()
 execute pathogen#helptags()
 
-colorscheme desert
+colorscheme solarized
 
 syntax on
 filetype on

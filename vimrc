@@ -76,7 +76,7 @@ endif
 " PLUGINS
 
 " for nerdtree
-let NERDTreeIgnore = ['\.pyc$', '\~$']
+let NERDTreeIgnore = ['\.pyc$', '\.egg-info', '\~$']
 
 " for pydiction
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
